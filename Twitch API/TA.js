@@ -30,7 +30,7 @@ var status;
 var name;
 
 if (data0.error){
-logo="img/twitch.png"
+logo="img/Twitch.png"
 name= data0.message;
 status = "No longer exist! "
 
@@ -44,7 +44,7 @@ var url1 = 'https://wind-bow.glitch.me/twitch-api/channels/'+users[i];
 $.getJSON(url1,function(data1){
 
 var logo=data1.logo;
-if(logo===null){logo="img/twitch.png"}
+if(logo===null){logo="img/Twitch.png"}
 var status=data1.status;
 if(status===null){status = "No active Status"}
 
