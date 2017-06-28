@@ -34,7 +34,7 @@ logo="img/Twitch.png"
 name= data0.message;
 status = "No longer exist! "
 
-$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'>"+status+"<div class='last'>"+current+"</div></div>");
+$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'>"+status+"<div class='last'>"+current+"</div></div>");
 }
 });}// DATA 0 and URL 0
 
@@ -51,7 +51,7 @@ if(status===null){status = "No active Status"}
 var name= data1.display_name;
 
 var link = data1.url;
-$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'> "+status+"<div class='last'>"+current+"</div></div>");
+$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'> "+status+"<div class='last'>"+current+"</div></div>");
 });}// DATA 1 and URL 1
 
 
