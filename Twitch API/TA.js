@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 // Twitch Users
-var users = ["ESL_SC2","brunofin","comster404","OgamingSC2","cretetion","storbeck","habathcx","RobotCaleb","noobs2ninjas","ShoutFactoryTV","StreamerHouse"];
+var users = ["ESL_SC2","OgamingSC2","cretetion","storbeck","habathcx","RobotCaleb","noobs2ninjas","ShoutFactoryTV","StreamerHouse"];
 
 // Curent Online / Offline freecodecamp 
 
