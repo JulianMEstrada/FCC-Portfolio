@@ -1,0 +1,97 @@
+.body {
+background-color: #6441A5;
+font-family: 'Chivo', sans-serif;
+}
+
+.log {
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    border-radius: 0px;
+    padding-right: 15px;
+}
+
+.heading{
+text-shadow: 0px 2px #6441A5;
+font-family: 'Chivo', sans-serif;
+padding-bottom: 20px;
+}
+
+img{
+width:168px;
+height: 168px;
+border-radius: 100px;
+padding-left: 20px;
+}
+a:link{
+
+    color: white;
+    text-decoration: underline;
+}
+a:visited{
+	
+    color: white;
+    text-decoration: underline;
+}
+a:hover{
+
+    color: white;
+    text-decoration: underline;
+}
+a:active{
+	
+    color: white;
+    text-decoration: underline;
+}
+.col
+{
+    float: left;
+    width: 25%;
+
+}
+
+.last{
+    float: right;
+    width: 25%;
+    color:white;
+    padding-left: 190px;
+}
+.row{
+    border: 6px solid white; 
+    height: auto;
+    overflow: auto;
+    border-radius: 20px;
+}
+
+
+/* FOOTING */
+.fa{
+font-size: 3em !important;
+margin: auto;
+transition: color .5s;
+padding: 30px;
+cursor: pointer;
+color: white;
+}
+
+.fa:hover{
+color: white;
+}
+.fa-github{
+color: white;
+}
+.fa-fire{
+color: white;
+}
+
+footer{
+margin: 50px 0 0 0;
+background: #6441A5;
+}
+
+.footerhr{
+border: 1px solid #6441A5;
+}
+
+
+
