@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
 // Twitch Users
-var users = ["ESL_SC2","OgamingSC2","cretetion","freecodecamp","storbeck","habathcx","RobotCaleb","noobs2ninjas","ShoutFactoryTV","StreamerHouse"];
+var users = ["ESL_SC2","brunofin","comster404","OgamingSC2","cretetion","freecodecamp","storbeck","habathcx","RobotCaleb","noobs2ninjas","ShoutFactoryTV","StreamerHouse"];
 
 // Curent Online / Offline 
 var current;
@@ -34,7 +34,7 @@ logo="img/Twitch.png"
 name= data0.message;
 status = "No longer exist! "
 
-$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'>"+status+"<div class='last'>"+current+"</div></div>");
+$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'alt='img/Twitch.png'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'>"+status+"<div class='last'>"+current+"</div></div>");
 }
 });}// DATA 0 and URL 0
 
@@ -47,14 +47,14 @@ var logo=data1.logo;
 if(logo===null){logo="img/Twitch.png"}
 var status=data1.status;
 if(status===null){status = "No active Status"}
+if(status===undefined){status = "No longer exist!"}
 
 var name= data1.display_name;
+if(name===404){status = "No longer exist!"}
 
 var link = data1.url;
-$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'> "+status+"<div class='last'>"+current+"</div></div>");
+$("#userInfo").prepend("<div class = 'row'>"+"<div class='col'>"+"<a target='_blank' href="+link+"><img src=' "+logo+"'alt='img/Twitch.png'</a>"+"</div>"+"<div class='col'>"+name+"</div>"+"<div class='col'> "+status+"<div class='last'>"+current+"</div></div>");
 });}// DATA 1 and URL 1
 
 
 });//JQUERY 
-
-
