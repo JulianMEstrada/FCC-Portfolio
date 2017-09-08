@@ -1,17 +1,9 @@
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-/*and (orientation : landscape)*/ {
-html,
-body {
 
-width:1000px; 
-}
-}
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323|Oswald');
 
 
 .body{
-background-color: white;
+background-color: #0a2654;
 text-align: center;
 padding-top: 230px;
 width: auto;
@@ -23,8 +15,21 @@ width: 200px;
 height: 200px;
 cursor:pointer;
 }
-
-
+.allButtons1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -65px; /* margin is -0.5 * dimension */
+    margin-top: 0px; 
+}
+.allButtons2{
+    position: absolute;
+    height: 50px;
+    top: 45%;
+    left: 50%;
+    margin-left: -65px; /* margin is -0.5 * dimension */
+    margin-top: 0px; 
+}
 
 #toggleOnOff{
   width:auto;
@@ -35,7 +40,7 @@ cursor:pointer;
   color: black;
   position: relative;
   text-align: center;
- z-index: 4;
+  z-index: 4;
 }
 #toggleStrictStart{
   width:auto;
@@ -47,14 +52,12 @@ cursor:pointer;
   text-align: center;
   z-index: 4;
 
-
-
 }
 #toggleWords{
   width:auto;
   height:auto;
   display:inline;
-  font-weight: 20px;
+  font-weight: 30px;
   font-size: 20px;
   position: relative;
   text-align: center;
@@ -169,4 +172,9 @@ z-index: 1;
      top: 0; left: 0; bottom: 280px; right: 280px;
 }
 }
+
+
+
+
+
 
