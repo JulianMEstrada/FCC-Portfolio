@@ -1,3 +1,14 @@
+$(window).on('resize', function() {
+    if($(window).height() > 400) {
+        $('#body').addClass('allButtons2');
+        $('#body').removeClass('allButtons1');
+    }else{
+        $('#body').addClass('allButtons1');
+        $('#body').removeClass('allButtons2');
+    }
+})
+
+
 // Global Document Ready function.
 $(document).ready(function(){
 
@@ -6,6 +17,8 @@ sound0 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
 sound1 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
 sound2 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
 sound3 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+sound4 = new Audio('error.wav');
+sound5 = new Audio('win.wav');
 
 // Const for colors. 
 const red = "red";
@@ -81,7 +94,8 @@ simonGame.step++;
 
 // Failure condition
 else if (color != simonGame.colorLevels[simonGame.step] && strictcon === false){
-alert("Wrong");
+sound4.play();
+alert("Simon Says: Wrong! sequence was broken! Would you kindly try again?");
 simonGame.colorLevels.pop();
 simonGame.step = 0; 
 simonGame.nextLevel();
@@ -90,19 +104,21 @@ simonGame.nextLevel();
 
 // Failure condition
 else if (color != simonGame.colorLevels[simonGame.step] && strictcon === true){
-alert("Wrong");
+sound4.play();
+alert("Simon Says: Wrong! sequence was broken! Game is in strict and will now reset at zero! Would you kindly try again?");
 simonGame.colorLevels= [];
 simonGame.step = 0; 
 simonGame.nextLevel();
-console.log('strict bitch');
+console.log('strict');
 count = 0;
 $("#countHold").html(count);
 }
 
- else if(count === 20) {
- 	colorLevels = [];
- 	$(".body").hide();
- 	$(".win").toggle();		
+ if(count === 20) {
+ 	sound5.play();
+ 	alert("Simon: AWWW yeah dawg, you WON ! Thanks for playing! Simon will now reset.");
+ 	location.reload();
+		
 }
 
 },
