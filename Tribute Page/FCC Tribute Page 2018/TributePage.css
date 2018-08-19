@@ -4,7 +4,9 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    background-color: #FFFFFF;
+}
+body{
+      background-color: #FFFFFF;
     text-align: center;
 }
 header{
@@ -29,8 +31,12 @@ p{
   display: inline-block;
   position:relative;
 }
-#profile{
+#image{
   padding-left: 30px;
+}
+#img-caption{
+  font-size: 7px;
+  opacity: 0.5;
 }
 #Firstbuttonplay{
 z-index: -1;
@@ -46,7 +52,7 @@ right: 25%;
 top: 35%;
 width: 50%;
 }
-#profile:hover{
+#image:hover{
 opacity: 0.5;
 }
 #albums:hover{
@@ -61,15 +67,15 @@ opacity: 0.5;
 }
 #albums{
   display: block;
-	max-height:200px;
-	max-width: 200px; 
+  max-height:200px;
+  max-width: 200px; 
   padding-bottom: 30px;
 }
 #FirstAlbums{
   display: block;
-	max-height:200px;
-	max-width: 200px; 
-	padding-top: 30px;
+  max-height:200px;
+  max-width: 200px; 
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .columnLeft {
