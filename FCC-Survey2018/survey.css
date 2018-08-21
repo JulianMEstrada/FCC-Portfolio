@@ -81,4 +81,30 @@ input[type='radio']{
     vertical-align: top;
     display: block;
  }
+ /* FOOTING */
+.fa{
+font-size: 3em !important;
+margin: auto;
+transition: color .5s;
+padding: 30px;
+cursor: pointer;
+color: black;
+}
+
+.fa:hover{
+color: grey;
+}
+.fa-github{
+color:black;
+}
+.fa-fire{
+color: black;
+}
+
+footer{
+background: #b6f9f3;
+}
+.footerhr{
+border: 1px white;
+}
 
