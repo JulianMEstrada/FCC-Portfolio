@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="survey.css">
+<html>
+<head>
+	<title>Generic Survey Form</title>
+	<header id="title"><h1>Movie Survey<h1></header>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="description">
+			<p>Please let us know about you, and your movie habits</p>
+		</div>
+
+		<form id="survey-form"  action="https://formspree.io/jestra11@ucsc.edu"
+      method="POST">
+
+			<div id="personalInfo">
+			<label id="name-label"> * Name:</label>  <input id = "name" type="text" name="name" placeholder="Enter Name" required><br>
+			<label id="email-label"> * Email:</label>  <input id = "email" type="Email" name="_replyto" placeholder="Enter Email"required><br>
+			<label id="number-label"> * Age#:</label>  <input type="number" id = "number" min="1" max="100" name="age" placeholder="Enter Age"required><br>
+			 </div>
+
+			 <div id="genera">
+			<strong>Which option best describes your favorite movie genera:</strong>
+			<select name="current" id="dropdown">
+				<option value="action">Action</option>
+				<option value="animation">Anime/Animation</option>
+				<option value="adventure">Adventure</option>
+				<option value="comedy">Comedy</option>
+				<option value="crime">Crime</option>
+				<option value="cult">Cult</option>
+				<option value="documentary">Documentary</option>
+				<option value="drama">Drama</option>
+				<option value="epics/historical">Epics/Historical</option>
+				<option value="horror">Horror</option>
+				<option value="independent">Independent</option>
+				<option value="musical">Musical</option>
+				<option value="romance">Romance</option>
+				<option value="si-fi">Sci-Fi</option>
+				<option value="Thriller">Thriller</option>
+				<option value="war">War</option>
+				<option value="westerns">Westerns</option>
+			</select>
+		</div>
+<div id="amountperyear">
+			<strong> * How many times a year do you go to the cinima? </strong>
+			<input type="number" min="1" max="100" name="views" placeholder="Amount" size="30"required>
+</div>
+
+<div id="source">
+			<strong>What source do you use most to watch movies?</strong>
+			<br>
+			<input type="radio" name="movieSource">DVD/Redbox<br>
+			<input type="radio" name="movieSource"> Netflix <br>
+			<input type="radio" name="movieSource"> Hulu <br>
+			<input type="radio" name="movieSource"> Theaters  <br>
+			<input type="radio" name="movieSource"> Television/Cable <br>
+			<input type="radio" name="movieSource"> Pirating: putlocker, torrent <br>
+			<input type="radio" name="movieSource"> Other <br>
+</div>	
+
+<div id="director">
+     		<strong>Who is your favorite film director?</strong>
+			<input type="text" name="director" placeholder="Director name" size="30">
+		</div>
+
+<div id="moviecompany">
+			<strong> Who do you usually watch movies with? </strong>
+			<br>
+			<input type="radio" name="watch"> Nobody</input><br>
+			<input type="radio" name="watch"> With Family</input><br>
+			<input type="radio" name="watch"> With friends</input><br>
+			<input type="radio" name="watch"> With Partner</input><br>
+			<input type="radio" name="watch"> In a group</input><br>
+			<input type="radio" name="watch"> Other</input><br>
+</div>
+<div id="snack">
+			<strong> * What is your favorite snack to eat while watching films?</strong>
+			<input type="text" name="Snack" placeholder="Snack Name" size="30" required>
+</div>
+
+<div id="judge">
+			<strong>How do you judge a film for quality? (check all that apply) </strong>
+			<br>
+			<input type="checkbox" value="cinematography">Cinematography</input><br>
+			<input type="checkbox" value="script">Script dialogue</input><br>
+			<input type="checkbox" value="studio">Studio</input><br>
+			<input type="checkbox" value="budget">Budget</input><br>
+			<input type="checkbox" value="actors">Actors/Acting</input><br>
+			<input type="checkbox" value="plot">Plot Consistency</input><br>
+			<input type="checkbox" value="sounds">Soundtrack</input><br>
+			<input type="checkbox" value="special">Special Effects</input><br>
+			<input type="checkbox" value="other">Other</input><br>
+</div>
+
+<div id="infobox">
+			<strong>Any suggestions or other movie related information you would like to add:</strong>
+			<br>
+			<textarea name="text" cols="70" rows="9" placeholder="Enter any further info in here...">
+			</textarea>
+		</div>
+
+		<div id="submit">
+			<input type="Reset" value="Reset" style="background-color: #b6f9f3; float: left;" />
+		<input type="submit" value="Send" style="background-color: #b6f9f3;"/>
+
+		</div>
+
+		</form>
+
+	</div>
+</body>
+
+</html>
