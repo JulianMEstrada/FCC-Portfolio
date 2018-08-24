@@ -1,0 +1,120 @@
+/* ANCORING TAGS FOR NAV */
+
+a.anchorH {
+display: block;
+position: relative;
+top: -210px;
+visibility:hidden;
+}
+a.anchorA {
+display: block;
+position: relative;
+top: -20px;
+visibility:hidden;
+}
+a.anchorP {
+display: block;
+position: relative;
+top: 0px;
+visibility:hidden;
+}
+a.anchorC {
+display: block;
+position: relative;
+top: -100px;
+visibility:hidden;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+}
+header{
+   background-color: white; 
+   position: fixed;
+   top: 0px; 
+   width: 100%; 
+   transition: top 0.3s; 
+   z-index: 1;
+   text-align: left;
+   padding-top: 10px;
+}
+body{
+text-align: center;
+margin:30px;
+padding-top: 70px;
+
+}
+h1{
+padding-top: 20px;
+}
+p{
+padding-top: 20px;
+}
+img{
+margin: 40px;
+width: auto;
+height: 300px;
+}
+.submitbtn{
+padding-top: 20px;
+}
+
+.fa-truck{
+font-size: 50px;
+}
+.fa-cogs{
+font-size: 50px;
+}
+.fa-hands{
+font-size: 50px;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  padding-right: 20px;
+}
+i{
+padding-top: 30px;
+font-size: 30px;
+}
+/* FOOTING */
+.fa{
+font-size: 2em !important;
+margin: auto;
+transition: color .5s;
+padding: 30px;
+cursor: pointer;
+color: black;
+}
+
+.fa:hover{
+color: grey;
+}
+
+footer{
+margin: 50px 0 0 0;
+}
+
+
+
+@media all and (max-width: 600px) {
+  
+  .container {
+    flex-wrap: wrap;
+  }
+  .container > li {
+    flex-basis: 50%;
+    padding-right: 0px;
+  }
+  img{
+width: 80%;
+height: 80%;
+position: relative;
+top: 40px;
+}
+}
