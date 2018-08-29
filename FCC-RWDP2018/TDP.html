@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/cssfont-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="TDP.css">
+<script type="text/javascript" src="TDP.js"></script>
+
+<div id="HTMLnav">
+    <nav id="navbar">
+      <header>HTML Basics</header>
+      <ul> 
+        <a class="nav-link" href="#IntroductionHTML" rel="internal"><li>HTML Introduction</li></a>
+        <a class="nav-link" href="#ElementHTML" rel="internal"><li>Anatomy of an HTML element</li></a>
+        <a class="nav-link" href="#Nestingelements" rel="internal"><li>Nesting Elements</li></a>
+        <a class="nav-link" href="#Emptyelements" rel="internal"><li>Empty Elements</li></a>
+        <a class="nav-link" href="#Anatomy" rel="internal"><li>Anatomy of an HTML document</li></a>
+        <a class="nav-link" href="#Images" rel="internal"><li>Images</li></a>
+        <a class="nav-link" href="#MarkingUptext" rel="internal"><li>Marking Up text</li></a>
+        <a class="nav-link" href="#Links" rel="internal"><li>Links</li></a>
+        <a class="nav-link" href="#Conclusion" rel="internal"><li>HTML Basics Conclusion</li></a>
+        <a class="nav-link" href="#Reference" rel="internal"><li>HTML Reference</li></a>
+    </ul>
+</nav>
+</div>
+
+<div id="CSSnav" style="display:none;">
+    <nav id="navbar">
+      <header>CSS Basics</header>
+      <ul> 
+        <a class="nav-link" href="#IntroductionCSS" rel="internal"><li>Introduction</li></a>
+        <a class="nav-link" href="#AnatomyCSS" rel="internal"><li>Anatomy of a CSS ruleset</li></a>
+        <a class="nav-link" href="#FontsCSS" rel="internal"><li>Fonts and text</li></a>
+        <a class="nav-link" href="#BoxesCSS" rel="internal"><li>Boxes</li></a>
+        <a class="nav-link" href="#PositioningCSS" rel="internal"><li>Positioning and styling</li></a>
+        <a class="nav-link" href="#CenteringCSS" rel="internal"><li>Centering an image</li></a>
+        <a class="nav-link" href="#ConclusionCSS" rel="internal"><li>CSS Basics Conclusion</li></a>
+<a class="nav-link" href="#ReferenceCSS" rel="internal"><li>CSS Reference</li></a>
+
+    </ul>
+</nav>
+</div>
+
+<div id="Jnav" style="display:none;">
+    <nav id="navbar">
+      <header>JS Basics</header>
+      <ul> 
+        <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+        <a class="nav-link" href="#What" rel="internal"><li>What you should already know</li></a>
+        <a class="nav-link" href="#JavaScriptvsjava" rel="internal"><li>JavaScript and Java</li></a>
+        <a class="nav-link" href="#Helloworld" rel="internal"><li>Hello world</li></a>
+        <a class="nav-link" href="#Variables" rel="internal"><li>Variables</li></a>
+        <a class="nav-link" href="#Declaringvariables" rel="internal"><li>Declaring variables</li></a>
+        <a class="nav-link" href="#scope" rel="internal"><li>Variable scope</li></a>
+        <a class="nav-link" href="#Global" rel="internal"><li>Global variables</li></a>
+        <a class="nav-link" href="#Constants" rel="internal"><li>Constants</li></a>
+        <a class="nav-link" href="#types" rel="internal"><li>Data types</li></a>
+        <a class="nav-link" href="#if" rel="internal"><li>if...else statement</li></a>
+        <a class="nav-link" href="#while" rel="internal"><li>while statement</li></a>
+        <a class="nav-link" href="#Function" rel="internal"><li>Function declarations</li></a>
+        <a class="nav-link" href="#Referencejava" rel="internal"><li>Reference</li></a>
+    </ul>
+</nav>
+</div>
+<!--
+<div id="HTMLFORMSnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML Forms</header>
+  <ul> 
+    <a class="nav-link" href="#FormsHTML" rel="internal"><li>HTML Forms</li></a>
+    <a class="nav-link" href="#FormElementsHTML" rel="internal"><li>HTML Form Elements</li></a>
+    <a class="nav-link" href="#InputTypesHTML" rel="internal"><li>HTML Input Types</li></a>
+    <a class="nav-link" href="#ElementsHTML" rel="internal"><li>HTML Elements</li></a>
+    <a class="nav-link" href="#InputAttributesHTML" rel="internal"><li>HTML Input Attributes</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTML5nav" style="display:none;">
+<nav id="navbar">
+  <header>HTML 5</header>
+  <ul> 
+    <a class="nav-link" href="#IntroHTML5" rel="internal"><li>HTML5 Intro</li></a>
+    <a class="nav-link" href="#SupportHTML5" rel="internal"><li>HTML5 Support</li></a>
+    <a class="nav-link" href="#NewElementsHTML5" rel="internal"><li>HTML5 New Elements</li></a>
+    <a class="nav-link" href="#SemanticsHTML5" rel="internal"><li>HTML5 Semantics</li></a>
+    <a class="nav-link" href="#MigrationHTML5" rel="internal"><li>HTML5 Migration</li></a>
+    <a class="nav-link" href="#StyleGuideHTML5" rel="internal"><li>HTML5 Style Guide</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTMLGRAPHICSnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML Graphics</header>
+  <ul> 
+    <a class="nav-link" href="#CanvasHTML" rel="internal"><li>HTML Canvas</li></a>
+    <a class="nav-link" href="#SVGHTML" rel="internal"><li>HTML SVG</li></a>
+    <a class="nav-link" href="#GoogleMapsHTML" rel="internal"><li>HTML Google Maps</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTMLMEDIAnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML Media</header>
+  <ul> 
+    <a class="nav-link" href="#MediaHTML" rel="internal"><li>HTML Media</li></a>
+    <a class="nav-link" href="#VideoHTML" rel="internal"><li>HTML Video</li></a>
+    <a class="nav-link" href="#AudioHTML" rel="internal"><li>HTML Audio</li></a>
+    <a class="nav-link" href="#PluginsHTML" rel="internal"><li>HTML Plug-ins</li></a>
+    <a class="nav-link" href="#YoutubeHTML" rel="internal"><li>HTML YouTube</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTMLAPIsnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML APIs</header>
+  <ul> 
+    <a class="nav-link" href="#GeolocationHTML" rel="internal"><li>HTML Geolocation</li></a>
+    <a class="nav-link" href="#Drag/DropHTML" rel="internal"><li>HTML Drag/Drop</li></a>
+    <a class="nav-link" href="#WebStorageHTML" rel="internal"><li>HTML Web Storage</li></a>
+    <a class="nav-link" href="#WebWorkersHTML" rel="internal"><li>HTML Web Workers</li></a>
+    <a class="nav-link" href="#SSEHTML" rel="internal"><li>HTML SSE</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTMLEXAMPLESnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML Summary</header>
+  <ul> 
+    <a class="nav-link" href="#SummaryHTML" rel="internal"><li>HTML Summary</li></a>
+    <a class="nav-link" href="#ReferencesHTML" rel="internal"><li>HTML References</li></a>
+  </ul>
+</nav>
+</div>
+
+<div id="HTMLREFERENCESnav" style="display:none;">
+<nav id="navbar">
+  <header>HTML References</header>
+  <ul> 
+    <a class="nav-link" href="#TagListHTML" rel="internal"><li>HTML Tag List</li></a>
+    <a class="nav-link" href="#AttributesHTML" rel="internal"><li>HTML Attributes</li></a>
+    <a class="nav-link" href="#EventsHTML" rel="internal"><li>HTML Events</li></a>
+    <a class="nav-link" href="#ColorsHTML" rel="internal"><li>HTML Colors</li></a>
+    <a class="nav-link" href="#CanvasHTML" rel="internal"><li>HTML Canvas</li></a>
+    <a class="nav-link" href="#Audio/VideoHTML" rel="internal"><li>HTML Audio/Video</li></a>
+    <a class="nav-link" href="#DoctypesHTML" rel="internal"><li>HTML Doctypes</li></a>
+    <a class="nav-link" href="#ChatacterHTML" rel="internal"><li>HTML Chatacter Sets</li></a>
+    <a class="nav-link" href="#URLEncodeHTML" rel="internal"><li>HTML URL Encode</li></a>
+    <a class="nav-link" href="#LangCodesHTML" rel="internal"><li>HTML Lang Codes</li></a>
+    <a class="nav-link" href="#MessagesHTTP" rel="internal"><li>HTTP Messages</li></a>
+    <a class="nav-link" href="#MethodsHTML" rel="internal"><li>HTTP Methods</li></a>
+    <a class="nav-link" href="#ConverterHTML" rel="internal"><li>PX to EM Converter</li></a>
+    <a class="nav-link" href="#ShortcutsHTML" rel="internal"><li>Keyboard Shortcuts</li></a>
+    <a class="nav-link" href="#ImagesHTML" rel="internal"><li>HTML Images</li></a>
+    <a class="nav-link" href="#TablesHTML rel="internal"><li>HTML Tables</li></a>
+    <a class="nav-link" href="#ListsHTML" rel="internal"><li>HTML Lists</li></a>
+    <a class="nav-link" href="#BlocksHTML" rel="internal"><li>HTML Blocks</li></a>
+    <a class="nav-link" href="#ClassesHTML" rel="internal"><li>HTML Classes</li></a>
+    <a class="nav-link" href="#IdHTML" rel="internal"><li>HTML Id</li></a>
+    <a class="nav-link" href="#IframesHTML" rel="internal"><li>HTML Iframes</li></a>
+    <a class="nav-link" href="#JavaScriptHTML" rel="internal"><li>HTML JavaScript</li></a>
+    <a class="nav-link" href="#FilePathsHTML" rel="internal"><li>HTML File Paths</li></a>
+    <a class="nav-link" href="#HeadHTML" rel="internal"><li>HTML Head</li></a>
+    <a class="nav-link" href="#LayoutHTML" rel="internal"><li>HTML Layout</li></a>
+    <a class="nav-link" href="#ResponsiveHTML" rel="internal"><li>HTML Responsive</li></a>
+    <a class="nav-link" href="#ComputercodeHTML" rel="internal"><li>HTML Computercode</li></a>
+    <a class="nav-link" href="#EntitesHTML" rel="internal"><li>HTML Entites</li></a>
+    <a class="nav-link" href="#SymbolsHTML" rel="internal"><li>HTML Symbols</li></a>
+    <a class="nav-link" href="#CharsetHTML" rel="internal"><li>HTML Charset</li></a>
+    <a class="nav-link" href="#URLEncodeHTML" rel="internal"><li>HTML URL Encode</li></a>
+    <a class="nav-link" href="#XHTMLHTML" rel="internal"><li>HTML XHTML</li></a>
+  </ul>
+</nav>
+</div>
+-->
+
+<main  id="main-doc">
+
+
+  <header class="mainHeader">
+    <ul id="docNav">
+        <!--<div class="dropdown">-->
+
+           <li><a href="#" onClick="window.location.reload()">HTLM</a></li>
+           <!--<i class="fa fa-caret-down"></i>-->
+           <!--<div class="dropdown-content">-->
+              <!--<a href="#" onclick="HTMLFORM()">HTLM FORMS</a>-->
+              <!--<a href="#" onclick="HTML5()">HTML 5</a>-->
+              <!--<a href="#" onclick="HTMLGRAPHICS()">HTML Graphics</a>-->
+              <!--<a href="#"onclick="HTMLMEDIA()">HTLM Media</a>-->
+              <!--<a href="#"onclick="HTMLAPIs()">HTML APIs</a>-->
+              <!--<a href="#"onclick="HTMLEXAMPLES()">HTML Examples</a>-->
+              <!--<a href="#"onclick="HTMLREFERENCES()">HTML References</a>-->
+
+              <!--</div>-->
+              <!--</div>-->
+              <!--<div class="dropdown">-->
+
+                  <li><a href="#" onclick="CSSnav(), CSSnavbody()">CSS</a></li>
+                  <!--<i class="fa fa-caret-down"></i>-->
+                  <!--<div class="dropdown-content">-->
+                      <!--<a href="#">Link 1</a>-->
+                      <!--<a href="#">Link 2</a>-->
+                      <!-- <a href="#">Link 3</a>-->
+
+                      <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="dropdown">-->
+
+                          <li class="full-text"><a href="#" onclick="Jnav(),Jnavbody()">JAVASCRIPT</a></li>
+                          <li class="short-text"><a href="#" onclick="Jnav(), Jnavbody()">JSCRIPT</a></li>
+                          <!--<i class="fa fa-caret-down"></i>-->
+                          <!--<div class="dropdown-content">-->
+                              <!--<a href="#">Link 1</a>-->
+                              <!--<a href="#">Link 2</a>-->
+                              <!--<a href="#">Link 3</a>-->
+
+                              <!--</div>-->
+                              <!--</div>-->
+                          </ul>
+                      </div>
+                  </header>
+
+
+                <div id="HTMLnavbody">
+                <section class="main-section" id="IntroductionHTML">
+                    <br>
+                    <br>
+                    <br>
+                    <header><u>Introduction</u></header>
+                    <article>
+                        <h3>So what is HTML, really?</h3>
+                        <p>HTML is not a programming language; it is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, and can make font bigger or smaller, and so on.  For example, take the following line of content:</p>
+                        <code>
+                            <p>My cat is very grumpy</p>
+                        </code>
+                        <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:</p>
+                        <code>
+                            &lt;p&gt;My cat is very grumpy&lt;/p&gt;
+                        </code>
+                    </article>
+                </section>
+
+                <section class="main-section" id="ElementHTML">
+                    <br>
+                    <br>
+                    <br>
+                    <header><u>Anatomy of an HTML element</u></header>
+                    <article>
+                        <p>Let's explore this paragraph element a bit further.</p>
+                        <img src="grumpy-cat-small.png">
+                        <p>The main parts of our element are:</p>
+                        <ol>
+                            <li>1. <strong>The opening tag:</strong> This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins, or starts to take effect — in this case where the paragraph begins.
+                            </li>
+                            <li>2. <strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is one of the common beginner errors and can lead to strange results.</li>
+                            <li>3. <strong>The content:</strong> This is the content of the element, which in this case is just text.</li>
+                            <li>4. <strong>The element:</strong> The opening tag, the closing tag, and the content together comprise the element.</li>
+                        </ol>
+                        <p>Elements can also have attributes, which look like this:</p>
+                        <img src="grumpy-cat-attribute-small.png">
+                        <p>Attributes contain extra information about the element that you don't want to appear in the actual content. Here, class is the attribute name, and editor-note is the attribute value. The class attribute allows you to give the element an identifier that can be later used to target the element with style information and other things.</p>
+                        <p>An attribute should always have:</p>
+                        <ol>
+                            <li>1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
+                            <li>2. The attribute name, followed by an equals sign.</li>
+                            <li>3. Opening and closing quote marks wrapped around the attribute value.</li>
+                        </ol>
+                    </article>
+                </section>
+
+                <section class="main-section" id="Nestingelements">
+                    <br>
+                    <br>
+                    <br>
+                    <header><u>Nesting Elements</u></header>
+                    <article>
+                        <p>You can put elements inside other elements too — this is called <strong>nesting</strong>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a &lt;strong&gt; element, which means that the word is to be strongly emphasized:
+                        </p>   
+                        <code>
+                            &lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+                        </code>
+                        <p>You do however need to make sure that your elements are properly nested: in the example above we opened the &lt;p&gt; element first, then the &lt;strong&gt; element, therefore we have to close the &lt;strong&gt; element first, then the &lt;p&gt;. The following is incorrect:</p>
+                        <code>
+                            &lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt; &lt;/strong&gt;
+                        </code>
+                        <p>The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap like above, then your web browser will try to make a best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
+                        </p>
+                    </article>
+                </section>
+
+
+                <section class="main-section" id="Emptyelements">
+                    <br>
+                    <br>
+                    <br>
+                    <header><u>Empty elements</u></header>
+                    <article>
+                        <p>Some elements have no content, and are called <strong>empty elements</strong>. Take the &lt;img&gt; element we already have in our HTML:</p>
+                        <code>
+                            &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+                        </code>
+                        <p>This contains two attributes, but there is no closing </img> tag, and no inner content. This is because an image element doesn't wrap content to have an effect on it. Its purpose is to embed an image in the HTML page in the place it appears.</p>
+                    </article>
+                </section>
+
+
+                <section class="main-section" id="Anatomy"></section>
+                <br>
+                <br>
+                <br>
+                <header><u>Anatomy of an HTML document</u></header>
+                <article>
+                    <p>That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the Dealing with files article):</p>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;title&gt;My test page&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                    <p>Here we have:</p>
+                    <ul>
+                        <li> - &lt;!DOCTYPE html&gt; — the doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right. For now, that's all you need to know.</li>
+                        <li> - &lt;html&gt;&lt;/html&gt; — the &lt;html&gt; element. This element wraps all the content on the entire page, and is sometimes known as the root element.</li>
+                        <li> - &lt;head&gt;&lt;/head&gt; — the &lt;head&gt; element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.</li>
+                        <li> - &lt;meta charset="utf-8"&gt; — this element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages. Essentially it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.</li>
+                        <li> - &lt;title&gt;&lt;/title&gt; — the &lt;title&gt; element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favourite it.</li>
+                        <li> - &lt;body&gt;&lt;/body&gt; — the &lt;body&gt; element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="Images"></section>
+            <br>
+            <br>
+            <br>
+            <header><u>Images</u></header>
+            <article>
+                <p>Let's turn our attention to the &lt;img&gt; element again:</p>
+                <code>
+                    &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+                </code>
+                <p>As we said before, it embeds an image into our page in the position it appears. It does this via the src (source) attribute, which contains the path to our image file.</p>
+                <p>We have also included an alt (alternative) attribute. In this attribute, you specify descriptive text for users who cannot see the image, possibly because:</p>
+                <ol>
+                    <li>1. They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.</li>
+                    <li>2. Something has gone wrong causing the image to not display. For example, try deliberately changing the path inside your src attribute to make it incorrect. If you save and reload the page, you should see something like this in place of the image:
+                    </li>
+                </ol>
+                <img src="alt-text-example.png" style="width: 200px; padding-left: 150px;">
+                <p>The key words about alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."</p>
+                <p>Try coming up with some better alt text for your image now.</p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="MarkingUptext"></section>
+        <br>
+        <br>
+        <br>
+        <header><u>Marking Up text</u></header>
+        <article>
+            <p>his section will cover some of the basic HTML elements you'll use for marking up text.</p>
+            <h3>Headings</h3>
+            <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings — of your content. In the same way that a book has a main title, chapter titles and subtitles, an HTML document can too. HTML contains six heading levels, &lt;h1&gt;&lt;h6&gt; although you'll commonly only use 3–4 at most:</p>
+            <code>
+               &lt;h1&gt;My main title&lt;/h1&gt;
+               &lt;h2&gt;My top level heading&lt;/h2&gt;
+               &lt;h3&gt;My subheading&lt;/h3&gt;
+               &lt;h4&gt;My sub-heading&lt;/h4&gt;
+           </code>
+           <p>Now try adding a suitable title to your HTML page just above your &lt;img&gt; element.</p>
+           <h3>Paragraphs</h3>
+           <p>As explained above, &lt;p&gt; elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:</p>
+           <code>
+            &lt;p&gt;This is a single paragraph&lt;/p&gt;
+        </code>
+        <p>Add your sample text into one or a few paragraphs, placed directly below your &lt;img&gt; element.</p>
+        <h3>Lists</h3>
+        <p>A lot of the web's content is lists, and HTML has special elements for these. Marking up lists always consist of at least two elements. The most common list types are ordered and unordered lists:</p>
+        <ol>
+            <li>1. <strong>Unordered lists</strong> are for lists where the order of the items doesn't matter, like a shopping list. These are wrapped in a &lt;ul&gt; element.</li>
+            <li><strong>Ordered lists</strong> are for lists where the order of the items does matter, like a recipe. These are wrapped in an &lt;ol&gt; element.</li>
+        </ol>
+        <p>Each item inside the lists is put inside an &lt;li&gt; (list item) element.</p>
+        <p>For example, if we wanted to turn the part of the following paragraph fragment into a list:</p>
+        <code>
+            &lt;p&gt;At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... &lt;/p&gt;
+        </code>
+        <p>We could modify the markup to this:</p>
+        <code>
+            &lt;p&gt;At Mozilla, we’re a global community of&lt;/p&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;technologists&lt;/li&gt;
+            &lt;li&gt;thinkers&lt;/li&gt;
+            &lt;li&gt;builders&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;working together ... &lt;/p&gt;
+        </code>
+        <p>Try adding an ordered or unordered list to your example page.</p>
+    </article>
+</section>
+
+
+<section class="main-section" id="Links"></section>
+<br>
+<br>
+<br>
+<header><u>Links</u></header>
+<article>
+    <p>Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — &lt;a&gt; — the "a" being short for "anchor". To make text within your paragraph into a link, follow these steps:</p>
+    <p>1. Choose some text. We chose the text "Mozilla Manifesto".</p>
+    <p>2. Wrap the text in an &lt;a&gt; element, like so:</p>
+    <code>&lt;a&gt;Mozilla Manifesto&lt;/a&gt;</code>
+    <p>3. Give the &lt;a&gt; element an href attribute, like so:</p>
+    <code>&lt;a href = ""&gt;Mozilla Manifesto&lt;/a&gt;</code>
+    <p>4. Fill in the value of this attribute with the web address that you want the link to link to:</p>
+    <code>&lt;a href="https://www.mozilla.org/en-US/about/manifesto/"&gt;Mozilla Manifesto&lt;/a&gt;</code>
+    <p>You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.</p>
+    <p>Note* href might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands for hypertext reference.</p>
+    <p>Add a link to your page now, if you haven't already done so.</p>
+</article>
+<section class="main-section" id="Conclusion"></section>
+<br>
+<br>
+<br>
+<header><u>HTML Basics Conclusion</u></header>
+<article>
+    <p>If you have followed all the instructions in this article, you should end up with a page that looks like the one below:</p>
+    <img src="finished-test-page-small.png">
+</article>
+</section>
+<section class="main-section" id="Reference">
+     <br>
+    <br>
+    <br>
+    <br>
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank"><u>MDN</u></a>
+      </article>
+  </section>
+</div>
+
+
+
+
+
+<div id="CSSnavbody" style="display:none;">
+    <section class="main-section" id="IntroductionCSS">
+                   <br>
+                    <br>
+                    <br>
+        <header><u>Introduction</u></header>
+        <article>
+            <h3>So what is CSS, really?</h3>
+            <p>Like HTML, CSS is not really a programming language. It is not a markup language either — it is a style sheet language. This means that it lets you apply styles selectively to elements in HTML documents. For example, to select all the paragraph elements on an HTML page and turn the text within them red, you'd write this CSS:</p>
+            <code>
+                p {
+                color: red;
+            }  
+        </code>
+        <p>Let's try it out: paste those three lines of CSS into a new file in your text editor, and then save the file as style.css in your styles directory.</p>
+        <p>But we still need to apply the CSS to your HTML document. Otherwise, the CSS styling won't affect how your browser displays the HTML document.</p>
+        <p>1. Open your index.html file and paste the following line somewhere in the head (that is, between the &lt;head&gt; and &lt;/head&gt; tags):</p>
+        <code>
+            &lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;
+        </code>
+        <p>2. Save index.html and load it in your browser. You should see something like this:</p>
+        <img src="website-screenshot-styled.png">
+        <p>If your paragraph text is now red, congratulations! You've just written your first successful CSS.</p>
+    </article>
+</section>
+
+<section class="main-section" id="AnatomyCSS">
+    <br>
+    <br>
+    <br>
+     <br>
+    <header><u>Anatomy of a CSS ruleset</u></header>
+    <article>
+        <p>Let's look at the above CSS in a bit more detail:</p>
+        <img src="css-declaration-small.png">
+        <p>The whole structure is called a rule set (but often "rule" for short). Note also the names of the individual parts:</p>
+        <h3>Selector</h3>
+        <p>The HTML element name at the start of the rule set. It selects the element(s) to be styled (in this case, p elements). To style a different element, just change the selector.</p>
+        <h3>Declaration</h3>
+        <p>A single rule like color: red; specifying which of the element's properties you want to style.</p>
+        <h3>Properties</h3>
+        <p>Ways in which you can style a given HTML element. (In this case, color is a property of the &lt;p&gt; elements.) In CSS, you choose which properties you want to affect in your rule.</p>
+        <h3>Propery Value</h3>
+        <p>To the right of the property after the colon, we have the property value, which chooses one out of many possible appearances for a given property (there are many color values besides red).</p>
+        <p>Note the other important parts of the syntax:</p>
+        <ul>
+            <li> - Each rule set (apart from the selector) must be wrapped in curly braces ({}).</li>
+            <li> - Within each declaration, you must use a colon (:) to separate the property from its values.</li>
+            <li> - Within each rule set, you must use a semicolon (;) to separate each declaration from the next one.</li>
+        </ul>
+        <p>So to modify multiple property values at once, you just need to write them separated by semicolons, like this:</p>
+        <code>
+            p {
+            color: red;
+            width: 500px;
+            border: 1px solid black;
+        }
+    </code>
+    <h3>Selecting multiple elements</h3>
+    <p>You can also select multiple types of elements and apply a single rule set to all of them. Include multiple selectors separated by commas. For example:</p>
+    <code>
+        p, li, h1 {
+        color: red;
+    }
+</code>
+<h3>Different types of selectors</h3>
+<p>There are many different types of selectors. Above, we only looked at element selectors, which select all elements of a given type in the given HTML documents. But we can make more specific selections than that. Here are some of the more common types of selector:</p>
+<table>
+  <tr>
+    <th>Selector name</th>
+    <th>What does it select</th>
+    <th>Example</th>
+</tr>
+<tr>
+    <td>Element selector (sometimes called a tag or type selector)</td>
+    <td>All HTML element(s) of the specified type.</td>
+    <td>p Selects &lt;p&gt;</td>
+</tr>
+<tr>
+    <td>ID selector</td>
+    <td>The element on the page with the specified ID. On a given HTML page, you're only allowed one element per ID (and of course one ID per element).</td>
+    <td>#my-id 
+    Selects &lt;p id="my-id"&gt; or &lt;a id="my-id"&gt;</td>
+</tr>
+<tr>
+    <td>Class selector</td>
+    <td>The element(s) on the page with the specified class (multiple class instances can appear on a page).</td>
+    <td>.my-class
+    Selects &lt;p class="my-class"&gt; and  &lt;a class="my-class"&gt;</td>
+</tr>
+<tr>
+    <td>Attribute selector</td>
+    <td>The element(s) on the page with the specified attribute.</td>
+    <td>img[src]
+    Selects &lt;img src="myimage.png"&gt; but not &lt;img&gt;</td>
+</tr>
+<tr>
+    <td>Pseudo-class selector</td>
+    <td>The specified element(s), but only when in the specified state, e.g. being hovered over.</td>
+    <td>
+       a:hover
+   Selects &lt;a&gt;, but only when the mouse pointer is hovering over the link.</td>
+</tr>
+</table>
+
+<section class="main-section" id="FontsCSS">
+     <br>
+    <br>
+    <br>
+    <br>
+    <header><u>Fonts and text</u></header>
+    <article>
+        <p>Now that we've explored some CSS basics, let's start adding some more rules and information to our style.css file to make our example look nice. Let's start by getting our fonts and text to look a little better.</p>
+        <p>1. First of all, go back and find the output from Google Fonts that you stored somewhere safe. Add the &lt;link&gt; element somewhere inside your index.html's head (again, anywhere between the &lt;head&gt; and &lt;/head&gt; tags). It'll look something like this:</p>
+        <code>
+            &lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;
+        </code>
+        <p>2. Next, delete the existing rule you have in your style.css file. It was a good test, but red text doesn't actually look very good.</p>
+        <p>3. Add the following lines in its place, replacing the placeholder line with the actual font-family line you got from Google Fonts. (font-family just means the font(s) you want to use for your text.) This rule first sets a global base font and font size for the whole page (since &lt;html&gt; is the parent element of the whole page, and all elements inside it inherit the same font-size and font-family):</p>
+        <code>
+         html {
+         font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+         font-family: 'Open Sans', sans-serif; /* this should be the rest of the output you got from Google fonts */
+     }
+ </code>
+ <p> Note* Anything in a CSS document between /* and */ is a CSS comment, which the browser ignores when it renders the code. This is a place for you to write helpful notes on what you are doing.</p>
+ <p>4. Now we'll set font sizes for text-containing elements inside the HTML body (&lt;h1&gt;, &lt;li&gt;, and &lt;p&gt;). We'll also center the text of our heading and set some line height and letter spacing on the body content to make it a bit more readable:</p>
+ <code>
+    h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p, li {
+font-size: 16px;    
+line-height: 2;
+letter-spacing: 1px;
+}
+</code>
+<p>You can adjust these px values to whatever you like to get your design looking how you want, but in general your design should look like this:</p>
+<img src="website-screenshot-font-small.png">
+</article>
+</section>
+
+<section class="main-section" id="BoxesCSS">
+     <br>
+    <br>
+    <br>
+    <br>
+    <header><u>Boxes</u></header>
+    <article>
+        <p>One thing you'll notice about writing CSS is that a lot of it is about boxes — setting their size, color, position, etc. Most of the HTML elements on your page can be thought of as boxes sitting on top of each other.</p>
+        <img src="boxes.jpg">
+        <p>Not surprisingly, CSS layout is based principally on the box model. Each of the blocks taking up space on your page has properties like this:</p>
+        <ul>
+            <li> - padding, the space just around the content (e.g., around paragraph text)</li>
+            <li> - border, the solid line that sits just outside the padding</li>
+            <li> - margin, the space around the outside of the element</li>
+        </ul>
+        <img src="box-model.png">
+        <p>In this section we also use:</p>
+        <ul>
+            <li>width (of an element)</li>
+            <li>background-color, the color behind an element's content and padding</li>
+            <li>color, the color of an element's content (usually text)</li>
+            <li>text-shadow: sets a drop shadow on the text inside an element</li>
+            <li>display: sets the display mode of an element (don't worry about this yet)</li>
+        </ul>
+        <p>So, let's get started and add some more CSS to our page! Keep adding these new rules to the bottom of the page, and don't be afraid to experiment with changing values to see how it turns out.</p>
+        <h3>sectionChanging the page color</h3>
+        <code>
+            html {
+            background-color: #00539F;
+        }</code>
+        <p>This rule sets a background color for the whole page. Change the color code above to whatever color you chose when planning your site.</p>
+        <h3>Sorting the body out</h3>
+        <code>
+            body {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #FF9500;
+            padding: 0 20px 20px 20px;
+            border: 5px solid black;
+        }
+    </code>
+    <p>Now for the &lt;body&gt; element. There are quite a few declarations here, so let's go through them all one by one:</p>
+    <ul>
+        <li>width: 600px; — this forces the body to always be 600 pixels wide.</li>
+        <li>margin: 0 auto; — When you set two values on a property like margin or padding, the first value affects the element's top and bottom side (make it 0 in this case), and the second value the left and right side (here, auto is a special value that divides the available horizontal space evenly between left and right).</li>
+        <li>background-color: #FF9500; — as before, this sets the element's background color. We've used a sort of reddish orange for the body as opposed to dark blue for the &lt;html&gt; element, but feel free to go ahead and experiment.</li>
+        <li>padding: 0 20px 20px 20px; — we have four values set on the padding, to make a bit of space around our content. This time we are setting no padding on the top of the body, and 20 pixels on the left, bottom and right. The values set top, right, bottom, left, in that order.</li>
+        <li>border: 5px solid black; — this simply sets a 5-pixel–wide, solid black border on all sides of the body.</li>
+    </ul>
+</article>
+</section>
+<section class="main-section" id="PositioningCSS">
+     <br>
+    <br>
+    <br>
+    <br>
+    <header><u>Positioning and styling</u></header>
+    <article>
+        <code>
+            h1 {
+            margin: 0;
+            padding: 20px 0;    
+            color: #00539F;
+            text-shadow: 3px 3px 1px black;
+        }
+    </code>
+    <p>You may have noticed there's a horrible gap at the top of the body. That happens because browsers apply some default styling to the &lt;h1&gt; element (among others), even when you haven't applied any CSS at all! That might sound like a bad idea, but we want even an unstyled webpage to have basic readability. To get rid of the gap we overrode the default styling by setting margin: 0;.</p>
+    <p>Next up, we've set the heading's top and bottom padding to 20 pixels, and made the heading text the same color as the html background color.</p>
+    <p>One rather interesting property we've used here is text-shadow, which applies a text shadow to the text content of the element. Its four values are as follows:</p>
+    <ul>
+        <li> - The first pixel value sets the horizontal offset of the shadow from the text — how far it moves across: a negative value should move it to the left.</li>
+        <li> - The second pixel value sets the vertical offset of the shadow from the text — how far it moves down, in this example; a negative value should move it up.</li>
+        <li> - The third pixel value sets the blur radius of the shadow — a bigger value will mean a more blurry shadow.</li>
+        <li> - The fourth value sets the base color of the shadow.</li>
+    </ul>
+    <p>Again, try experimenting with different values to see what you can come up with!</p>
+</article>
+</section>
+<section class="main-section" id="CenteringCSS">
+    <br>
+     <br>
+    <br>
+    <br>
+    <header><u>Centering the image</u></header>
+    <article>
+        <code>
+            img {
+            display: block;
+            margin: 0 auto;
+        }
+    </code>
+    <p>Finally, we'll center the image to make it look better. We could use the margin: 0 auto trick again as we did earlier for the body, but we also need to do something else. The &lt;body&gt; element is block level, meaning it takes up space on the page and can have margin and other spacing values applied to it. Images, on the other hand, are inline elements, meaning they can't. So to apply margins to the image, we have to give the image block-level behavior using display: block;.</p>
+
+</article>
+</section>
+<section class="main-section" id="ConclusionCSS">
+    <br>
+    <br>
+    <br>
+    <br>
+    <header><u>Conclusion</u></header>
+    <article>
+        <p>If you have followed all the instructions in this article, you should end up with a page that looks something like this:</p>
+        <img src="website-screenshot-final.png">
+    </article>
+</section>
+  <section class="main-section" id="ReferenceCSS">
+    <br>
+    <br>
+    <br>
+    <br>
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank"><u>MDN</u></a>
+      </article>
+  </section>
+</div>
+
+
+
+
+<div id="Jnavbody" style="display:none;">
+  <section class="main-section" id="Introduction">
+                    <br>
+                    <br>
+                    <br>
+    <header>Introduction</header>
+    <article>  
+      <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+
+      <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+
+      <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+      <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+  </artice>
+</section>
+<section class="main-section" id="What">
+        <br>
+    <br>
+    <br>
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+      <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+      <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+  </artice>
+</section>
+<section class="main-section" id="JavaScriptvsjava">
+        <br>
+    <br>
+    <br>
+    <header>JavaScript and Java</header>
+    <article>
+        <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+    </article>
+</section>
+<section class="main-section" id="Helloworld">
+        <br>
+    <br>
+    <br>
+    <header>Hello world</header>
+    <article> 
+        To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+        <code>function greetMe(yourName) {
+          alert("Hello " + yourName);
+      }
+      greetMe("World");
+  </code>
+
+  Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
+</article>
+</section>
+<section class="main-section" id="Variables">
+        <br>
+    <br>
+    <br>
+    <header>Variables</header>
+    <p>
+        You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+    </p>
+    <p>
+        A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+    </p>
+    <p>
+        You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers.
+
+        Some examples of legal names are Number_hits, temp99, and _name.
+    </p>
+
+</section>
+<section class="main-section" id="Declaringvariables">
+        <br>
+    <br>
+    <br>
+    <header>Declaring variables</header>
+    <article>
+        You can declare a variable in three ways:
+        <p>
+          With the keyword var. For example, <code>var x = 42.</code> This syntax can be used to declare both local and global variables.
+      </p>
+      <p>
+        By simply assigning it a value. For example, <code>x = 42.</code> This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.
+    </p>
+    <p>
+        With the keyword let. For example,<code> let y = 13.</code> This syntax can be used to declare a block scope local variable. See Variable scope below.
+    </p>
+</article>
+</section>
+<section class="main-section" id="scope">
+        <br>
+    <br>
+    <br>
+    <header>Variable scope</header>
+    <article>
+       <p> When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+
+       <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+       <code>if (true) {
+          var x = 5;
+      }
+  console.log(x);  // 5</code>
+  <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+
+  <code>if (true) {
+      let y = 5;
+  }
+  console.log(y);  
+// ReferenceError: y is not defined</code>
+</article>
+</section>
+<section class="main-section" id="Global">
+        <br>
+    <br>
+    <br>
+    <header>Global variables</header>
+    <article>
+        <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+
+        <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+    </article>
+</section>
+<section class="main-section" id="Constants">
+        <br>
+    <br>
+    <br>
+    <header>Constants</header>
+    <article>
+        <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+
+        <code>const PI = 3.14;</code>
+        <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+
+        <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+
+        <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+
+        <code>// THIS WILL CAUSE AN ERROR
+            function f() {};
+            const f = 5;
+            // THIS WILL CAUSE AN ERROR ALSO
+            function f() {
+            const g = 5;
+            var g;
+            //statements
+        }</code>
+        However, object attributes are not protected, so the following statement is executed without problems.
+        <code>const MY_OBJECT = {"key": "value"};
+        MY_OBJECT.key = "otherValue";</code>
+    </article>
+</section>
+<section class="main-section" id="types">
+        <br>
+    <br>
+    <br>
+    <header>Data types</header>
+    <article>
+      <p>The latest ECMAScript standard defines seven data types:</p>
+      <li><p>Six data types that are primitives:</p>
+        <ul>
+          <li>Boolean. true and false.</li>
+          <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+          <li>undefined. A top-level property whose value is undefined.</li>
+          <li>Number. 42 or 3.14159.</li>
+          <li>String. "Howdy"</li>
+          <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li></ul>
+          <li>and Object</li>
+          Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.
+      </article>
+  </section>
+  <section class="main-section" id="if">
+        <br>
+    <br>
+    <br>
+    <header>if...else statement</header>
+    <article>
+        Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+
+        <code>if (condition) {
+          statement_1;
+      } else {
+      statement_2;
+  }</code>
+  condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
+  <p>
+    You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+</p>
+<code>if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+statement_2;
+} else if (condition_n) {
+statement_n;
+} else {
+statement_last;
+} </code>
+In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
+
+<code>if (condition) {
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
+} else {
+statement_3_runs_if_condition_is_false;
+statement_4_runs_if_condition_is_false;
+}</code>
+It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
+<code>if (x = y) {
+  /* statements here */
+}</code>
+If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
+
+<code>if ((x = y)) {
+  /* statements here */
+}</code>
+</article>
+</section>
+<section class="main-section" id="while">
+        <br>
+    <br>
+    <br>
+    <header>while statement</header>
+    <article>
+        A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
+
+        <code>while (condition)
+        statement</code>
+        If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+        <p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+
+        <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+
+        Example:
+
+        <p>The following while loop iterates as long as n is less than three:</p>
+
+        <code>var n = 0;
+            var x = 0;
+            while (n < 3) {
+            n++;
+            x += n;
+        }</code>
+        <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+
+        <li>After the first pass: n = 1 and x = 1</li>
+        <li>After the second pass: n = 2 and x = 3</li>
+        <li>After the third pass: n = 3 and x = 6</li>
+        <p>After completing the third pass, the condition n &lt 3 is no longer true, so the loop terminates.</p>
+    </article>
+</section>
+<section class="main-section" id="Function">
+        <br>
+    <br>
+    <br>
+    <header>Function declarations</header>
+    <article> 
+        A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+        <li>The name of the function.</li>
+        <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+        <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+        <p>For example, the following code defines a simple function named square:</P>
+
+            <code>function square(number) {
+              return number * number;
+          }</code>
+          <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+          </p>
+          <code>return number * number;</code>
+          <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+      </article>
+  </section>
+  <section class="main-section" id="Referencejava">
+        <br>
+    <br>
+    <br>
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank"><u>MDN</u></a></li>
+      </article>
+  </section>
+</div>
+
+<footer>
+<div id="othersocial" class="text-center">
+<a target= "_blank" href="https://github.com/JulianMEstrada"><i class="fa fa-github"></i></a>
+<a target= "_blank" href="https://www.freecodecamp.com/julianmestrada"><i class="fa fa-fire"></i></a>
+<h4 >Coded By: <a target= "_blank" href="https://www.freecodecamp.com/julianmestrada"><u>Julian M. Estrada</u> </a>|| 08.28.2018</h4>
+</footer>
+
+
+</main>
+
+
+</html>
