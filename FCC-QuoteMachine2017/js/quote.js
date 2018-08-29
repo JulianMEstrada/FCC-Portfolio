@@ -1,0 +1,31 @@
+$(document).ready(function(){
+  
+    var randomQuote;
+    var randomNum;
+    var randomAuthor;
+    newQuote();
+  
+    function newQuote(){  // Set up a quote function
+      
+      // BELLOW QUOTES IN CODE ARE FOR EDUCATIONAL POURPOSES ONLY AND I DO NOT OWN THEM
+      
+      var quote = ["Nobody exists on purpose. Nobody belongs anywhere. We're all going to die. Come watch TV.", "Listen, Morty, I hate to break it to you but what people call \"love\" is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it. Break the cycle, Morty. Rise above. Focus on science.","Sometimes science is more art than science, Morty. Lot of people don't get that."," It has been a... challenging mating season for Birdperson.","Weddings are basically just funerals with cake.","Listen, I'm not the nicest guy in the universe, because I'm the smartest, and being nice is something stupid people do to hedge their bets.", "Uncertainty is inherently unsustainable. Eventually, everything either is or isn't.","Ohh yea, you gotta get schwifty.","Like nothing shady ever happened in a fully furnished office? You ever hear about Wall Street Morty? You know what those guys do in their fancy board rooms? They take their balls and dip 'em in cocaine and wipe 'em all over each other. You know Grandpa goes around and he does his business in public because grandpa isn't shady.","Don't break an arm jerking yourself off Morty.","I don't like it here Morty. I can't abide bureaucracy. I don't like being told where to go and what to do. I consider it a violation.","I'll tell you how I feel about school, Jerry: its a waste of time. Bunch of people runnin around bumpin into each other, got a guy up front says, \'2 + 2,\' and the people in the back say, '4.' Then the bell rings and they give you a carton of milk and a piece of paper that says you can go take a dump or somethin'. I mean, it's not a place for smart people, Jerry. I know that's not a popular opinion, but that's my two cents on the issue.","WUBBA LUBBA DUB DUB!!!","What about the reality where Hitler cured cancer, Morty? The answer is: Don't think about it.","You gotta shove these seeds way up your butt morty, waay up there","You're growing up fast, Morty. You're growing into a great big thorn straight into my ass...","you're young, you have your whole life ahead of you, and your anal cavity is still taut yet malleable.","GRAAAAAASSSSSSS.... tastes bad.","HI! I'M MR MEESEEKS! LOOK AT ME!","I JUST WANNA DIE!","Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it's together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don't care what you do, you just gotta get it together... Get your shit together.","Awwww thanks, bitch!","Where are my testicles, Summer?","I am Mr. Booby Buyer. I'll buy those boobies for 25 schmeckles!","My name is Slip- Slippery Stair. I'll take ya down there for 25 SHMECK-ELS!","Prepare to be emancipated from your own inferior genes!","HEY, IM SQUANCHIN' HERE!","Oooohwee!","What about the reality where Hitler cured cancer, Morty? The answer is: Don't think about it.","Meeseeks were not born into this world fumbling for meaning, Jerry!","Life is effort, and I'll stop when I die!","I'm going to need you to take your opinions, and put 'em way up inside your butthole", "LETS GET RIGGITY WRECKED","Listen to me, Morty. I know that new situations can be intimidating. You lookin' around and it's all scary and different, but y'know... meeting them head-on, charging into 'em like a bull—that's how we grow as people.","The world is full of idiots who don't understand what's important, and they'll tear us apart, Morty. But if ya stick with me, I'm gonna accomplish great things, Morty. And you're gonna be part of 'em, and together we're gonna run around, Morty, we're gonna do all kinds of wonderful things, Morty. Just you and me, Morty. The outside world is our enemy, Morty. We're the only *URP* friends we've got, Morty! It's just Rick and Morty. Rick and Morty and their adventures, Morty! Rick and Morty forever and forever a hundred years Rick and Morty some things. Me and Rick and Morty runnin' around and, Rick and Morty time, all day long forever, all a hundred days Rick and Morty forever a hundred times, over and over Rick and Morty adventures dot com, www.rickandmorty.com, www Rick and Morty adventures, all hundred years, every minute Rick and Morty dot com, www hundred times Rick and Morty dot com.","Th-that’s my one arm man. I’m not driven by avenging my dead family Morty crawls away- Morty, that was FAKE! -and Morty gets pulled back. I-I’m driven by finding that, McNugget Sauce.","9 MORE SEASONS UNTIL I GET THAT DIPPING SZECHUAN SAUCE!","I WANT THAT MCNUGGET SAUCE MORTY!!!"];  // Insert Quotes 
+      
+var quote = quote.map(x => typeof x === 'string' ? "\"" + x + "\"" : x);
+      
+ var author =["-Morty","-Rick","-Rick","-Birdperson","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","Mr Meeseeks","Mr Meeseeks","-Morty","-Scary Terry","-Snuffles","-Mr. Booby Buyer","-Slip- Slippery Stair","-Abradolf Lincler","-Squanchy","-Mr.Poopybutthole","-Rick","-Mr Meeseeks","-Jerry","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick","-Rick"]; // Insert Author Name
+      
+       randomNum = Math.floor((Math.random()*quote.length));  // Randome number generated within the length of avaliable quotes.
+       randomQuote = quote[randomNum]; // randomNum will equal randomquote
+       randomAuthor = author[randomNum]; // randomNum also equals randomeAuthor
+      
+      $(".quote").text(randomQuote); // place random quote
+      $(".author").text(randomAuthor); // place author
+      
+    }
+    $("#tweet").on("click",function(){ //twitter button 
+    window.open("https://twitter.com/intent/tweet?text="+randomQuote+" "+randomAuthor);});
+  
+$(".btn").on("click",function(){newQuote();}) // display quote when button is pressed 
+  
+});

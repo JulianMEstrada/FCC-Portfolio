@@ -1,0 +1,96 @@
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+/*and (orientation : landscape)*/ {
+html,
+body {
+width:1000px; 
+}
+}
+.body{
+background-color: #5DBCD2;
+
+}
+.header{
+color: #5DBCD2;
+text-shadow: 2px 2px black;
+text-align: center;
+position: relative;
+top: 80px;
+font-family: 'Waiting for the Sunrise', cursive;
+}
+.ricknmorty{
+position: relative;
+text-align: center;
+top: 320px;
+}
+.portal{
+position: relative;
+text-align: center;
+margin-right: 50px;
+top: -400px;
+z-index: -1;
+}
+.btn{
+width: 250px;
+height:50px;
+background-color: #5DBCD2;
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+position: relative;
+top: -490px;
+font-family: 'Waiting for the Sunrise', cursive;
+font-size: 20px;
+border-radius: 15px;
+}
+
+.cint{
+text-align: center;
+}
+.btn-twitter{
+width:auto;
+height:auto;
+position: relative;
+top: -473px;
+border-radius: 15px;
+}
+.cite {
+    width: 900px;
+    border: 5px solid green;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    margin-top: -450px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+#container {
+    float: left;
+    margin: 0;
+    width: 80%;
+}
+.quote{
+font-family: 'Waiting for the Sunrise', cursive;
+font-size: 30px;
+color: white;
+font-weight: bold;
+
+}
+.author{
+font-family: 'Waiting for the Sunrise', cursive;
+font-size: 20px;
+color:white;
+}
+.footer{
+   position:relative;
+   bottom:-330px;
+   width:auto;
+   height:60px;   /* Height of the footer */
+   background:#5DBCD2;
+   text-align: center;
+}

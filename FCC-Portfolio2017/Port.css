@@ -1,0 +1,140 @@
+/* ANCORING TAGS FOR NAV */
+
+a.anchorH {
+display: block;
+position: relative;
+top: -210px;
+visibility:hidden;
+}
+a.anchorA {
+display: block;
+position: relative;
+top: -237px;
+visibility:hidden;
+}
+a.anchorP {
+display: block;
+position: relative;
+top: -100px;
+visibility:hidden;
+}
+a.anchorC {
+display: block;
+position: relative;
+top: -100px;
+visibility:hidden;
+}
+
+/* PAGES*/
+.homePage{
+margin: 80px 0 50px 0;
+/*background: #39ac73;*/
+background: white;
+font-family: ;
+text-align: center;
+padding-top: 100px;
+}
+.aboutPage{
+margin: 0 auto auto auto;
+/*background: #39ac73;*/
+background-color: white;
+font-family: ;
+text-align: center;
+padding-top: 60px;
+padding-bottom: 80px;
+}
+.one-half{
+width: 44%;
+float: left;
+margin: 0% 0 3% 4%;
+text-align: center;
+padding-left: 100px;
+}
+.one-half-img{
+width: 44%;
+float: left;
+margin: 0% 0 3% 4%;
+padding-left: 100px;
+}
+.one-third {
+width: 28%;
+float: left;
+margin: 2% 0 3% 4%;
+text-align: center;
+}
+
+/* FOOTING */
+.fa{
+font-size: 3em !important;
+margin: auto;
+transition: color .5s;
+padding: 30px;
+cursor: pointer;
+color: black;
+}
+
+.fa:hover{
+color: grey;
+}
+.fa-github{
+color: white;
+}
+.fa-fire{
+color: white;
+}
+
+footer{
+margin: 50px 0 0 0;
+background: black;
+}
+
+.footerhr{
+border: 1px solid black;
+}
+
+
+/* SETTINGS */
+
+#portfolio{
+background: white;
+}
+.frontimg{
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+li{
+font-size: 1.5em;
+}
+
+hr{
+border: 1px dashed #39ac73;
+}
+
+img{
+border: 2px solid black;
+transition: border-color .5s;
+}
+
+img:hover{
+border-color: #e6e600;
+}
+
+a{
+color: inherit;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+overflow-x: hidden;
+}
+
+.brandname {
+font-size: 1.5em;
+}
+
+img{
+margin: 15px;
+}
