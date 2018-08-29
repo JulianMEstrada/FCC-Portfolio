@@ -1,0 +1,73 @@
+body{
+  background-repeat:no-repeat;
+
+   background-size:cover;
+}
+.header{
+text-align: center;
+}
+
+#city{
+text-align: center;
+padding-top: 30px;
+}
+#time{
+text-align: center;
+padding-top: 30px;	
+}
+
+/*Weather Type*/
+#weatherType{ 
+text-align: center;
+padding-top: -10px;
+display: inline-block
+}
+#iconW{ /*IMG weather icon*/
+width: 40px;
+height: 40px;
+display: inline-block
+}
+.wT{ /*div weather type*/
+text-align: center;
+padding-left: 30px;
+}
+
+
+/*Tempature*/
+#fTemp{
+text-align: center;
+padding-top: -1px;
+display: inline-block
+}
+#themo{ /*IMG THEMOMETER */
+width: 40px;
+height: 40px;
+display: inline-block;
+}
+.fT{ /*Div Temp*/
+text-align: center;
+padding-left: 30px;
+}
+.icon{
+	background-image: ;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap; /* Align on the same line */
+  justify-content: space-between; /* Equal margin between the child elements */
+}
+/*Interface*/
+.interface{
+border: 5px;
+border-style: solid;
+color: white;
+}
+
+
+
+
+
+
+
+
